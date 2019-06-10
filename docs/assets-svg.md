@@ -49,6 +49,7 @@ When the packages have finished installing, you'll want to open (or create) the 
 ```js
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { faStar, faTrophy } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
@@ -63,8 +64,11 @@ export default function (Vue) {
 You can now use the icons anywhere in your components/templates:
 
 ```html
+<font-awesome :icon="['fas', 'star']"/>
+<font-awesome :icon="['fas', 'trophy']"/>
+
 <font-awesome :icon="['fab', 'github']"/>
 <font-awesome :icon="['fab', 'twitter']"/>
 ```
 
-And best of all, the SVG for Github/Twitter icons will be the only ones added to our final build. Make sure you read the docs on [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) to get full details on how to use the whole suite of FontAwesome fonts together.
+And best of all, the SVG for Star/Trophy & Github/Twitter icons will be the only ones added to our final build. Make sure you read the docs on [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome) to get full details on how to use the whole suite of FontAwesome fonts together.
